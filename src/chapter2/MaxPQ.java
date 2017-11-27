@@ -11,6 +11,9 @@ package chapter2;
  * a[k]向上一层的操作为令k = k/2，向下一层的操作为令k = 2k或2k+1
  */
 public class MaxPQ<Key extends Comparable<Key>> {
+    /**
+     * 基于堆的完全二叉树，存储于pq[1,N]中，pq[0]没有使用
+     */
     private Key[] pq;
     private int N = 0;
 
@@ -90,9 +93,13 @@ public class MaxPQ<Key extends Comparable<Key>> {
      * @return
      */
     public Key delMax(){
+        //从根节点得到最大元素
         Key max = pq[1];
+        //将其和最后一个节点交换
         exch(1, N--);
+        //防止对象游离
         pq[N+1] = null;
+        //恢复堆的有序性
         sink(1);
         return max;
     }
