@@ -18,7 +18,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
     private int N = 0;
 
     /**
-     * 该函数为i小于j时为真；
+     * less()函数为i小于j时为真；
      * @param i
      * @param j
      * @return
