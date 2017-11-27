@@ -9,9 +9,5 @@ public class MergeP {
         for (int k = 0; k < a.length; k++){
             aux[k] = a[k];
         }
-        //遍历数组a[lo,hi]:
-
     }
-
-
 }
